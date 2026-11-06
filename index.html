@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="de">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Codex Backup – Information und Datenschutz</title>
+<style>
+body{margin:0;background:#f5f7f8;color:#203440;font:17px/1.65 system-ui,sans-serif}main{max-width:780px;margin:48px auto;padding:40px;background:white;border-radius:14px}h1,h2{line-height:1.2;color:#153f50}h1{font-size:36px}h2{margin-top:40px;font-size:25px}a{color:#155e75}.draft{padding:15px;border-left:4px solid #b78018;background:#fff8e7;font-size:15px}footer{margin-top:40px;border-top:1px solid #dde4e8;padding-top:20px;font-size:14px}@media(max-width:650px){main{margin:0;padding:24px;border-radius:0}h1{font-size:30px}}
+</style>
+<main>
+<p class="draft"><strong>Status: Einrichtung läuft.</strong> Die automatische Sicherung ist noch nicht aktiviert. Die folgenden Angaben beschreiben den vorgesehenen Betrieb.</p>
+<h1>Codex Backup</h1>
+<p>Codex Backup ist eine persönliche Sicherungsanwendung für die eigenen Windows-Rechner von Dietmar Schragl. PowerShell, rclone und die Windows-Aufgabenplanung sollen datierte Sicherungen der Dateiinhalte und Verknüpfungsinformationen in das vom Betreiber freigegebene Google Drive übertragen.</p>
+<p>Die Anwendung ist für die Sicherung eigener Daten vorgesehen und bietet keinen öffentlichen Anmeldedienst. Weitere Rechner erhalten eigene Sicherungsbereiche und eigene Konfigurationen.</p>
+<nav><a href="privacy.html#datenschutz">Datenschutzhinweise</a> · <a href="#nutzung">Nutzung</a> · <a href="#kontakt">Kontakt</a></nav>
+<h2 id="datenschutz">Datenschutzhinweise</h2>
+<p><strong>Zweck und Daten:</strong> Die Google-Drive-Anbindung ist ausschließlich dafür vorgesehen, die ausdrücklich vorgesehenen Sicherungen zu erstellen, zu prüfen, aufzubewahren und wiederherzustellen. Im vorgesehenen Betrieb werden dazu die Google-Kontoadresse, Speicherquote sowie Datei- und Ordnermetadaten verarbeitet. Eigene Sicherungsinhalte und deren logische Datei- und Ordnernamen werden vor der Übertragung mit rclone crypt verschlüsselt.</p>
+<p><strong>Berechtigung:</strong> Die Anmeldung erfolgt über Google OAuth. Die eingerichtete Drive-Berechtigung ist technisch weiter gefasst als der vorgesehene Sicherungsordner. Die lokalen Skripte begrenzen ihre Sicherungs- und Löschoperationen auf den freigegebenen Sicherungsbereich. Eine Skriptbegrenzung verkleinert die OAuth-Berechtigung selbst nicht.</p>
+<p><strong>Speicherung:</strong> Für den Betrieb ist die Speicherung verschlüsselter Sicherungen im Google Drive des Betreibers vorgesehen. Google verarbeitet dabei weiterhin technische Metadaten, etwa Objektgrößen und Übertragungszeitpunkte. Für den Betrieb ist vorgesehen, Zugangstokens und den Verschlüsselungsschlüssel lokal in einer geschützten, Windows-DPAPI-verschlüsselten Konfiguration aufzubewahren. Für den Verlust eines Rechners muss der Betreiber den Wiederherstellungsschlüssel separat sicher verwahren.</p>
+<p><strong>Aufbewahrung:</strong> Vorgesehen sind die letzten vier erfolgreich abgeschlossenen und geprüften Sicherungen je Rechner. Ältere, eindeutig dieser Anwendung zugeordnete Sicherungen dürfen erst nach den vorgeschriebenen Prüfungen in den Google-Drive-Papierkorb verschoben werden. Der Papierkorb wird nicht automatisch geleert. Fehlgeschlagene oder unvollständige Sicherungsversuche werden nicht als erfolgreiche Sicherung gezählt und nicht automatisch entfernt. Lokale Betriebsprotokolle enthalten technische Ergebnisse und können Dateipfade enthalten.</p>
+<p><strong>Weitere Verwendung:</strong> Die Sicherungsanwendung verwendet Google-Daten nicht für Werbung, den Verkauf von Daten oder das Training allgemeiner KI-Modelle. Es gibt keine Weitergabe der Sicherungsinhalte an einen zusätzlichen Analysedienst durch diese Skripte. Die Verarbeitung durch Google richtet sich zusätzlich nach <a href="https://policies.google.com/privacy">Googles Datenschutzerklärung</a>.</p>
+<p><strong>Kontrolle:</strong> Nach der Einrichtung kann der Betreiber die Aufgabe deaktivieren, Sicherungen verwalten und den Google-Zugriff in den <a href="https://myaccount.google.com/connections">Google-Kontoverbindungen</a> widerrufen. Ein Widerruf entfernt bereits vorhandene Sicherungen nicht automatisch. Ohne separat verwahrten Entschlüsselungsschlüssel lassen sich die verschlüsselten Sicherungen nach einem Schlüsselverlust nicht wiederherstellen.</p>
+<p><strong>Webseitenbetrieb:</strong> Diese öffentliche Informationsseite wird über GitHub Pages bereitgestellt. GitHub speichert beim Besuch nach eigenen Angaben die IP-Adresse zu Sicherheitszwecken, auch ohne Anmeldung bei GitHub. Weitere Angaben enthält die <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub-Datenschutzerklärung</a>. Der hier vorbereitete Seitencode enthält keine Analyseprogramme, Werbeeinbindungen, Formulare oder extern geladenen Schriftarten. Die Sicherungsinhalte und Google-Zugangsdaten werden nicht an GitHub übertragen.</p>
+<h2 id="nutzung">Nutzungsbedingungen</h2>
+<p>Die Anwendung ist für die eigenen, ausdrücklich freigegebenen Daten des Betreibers vorgesehen. Eine erfolgreiche Dateisicherung ersetzt weder ein Windows-Systemabbild noch eine anwendungsspezifische Datenbanksicherung. Die Wiederherstellbarkeit ist durch konkrete Wiederherstellungsprüfungen zu belegen. Diese Seite enthält keine Zusage eines öffentlichen Sicherungsdienstes.</p>
+<h2 id="kontakt">Kontakt</h2>
+<p>Betreiber: Dietmar Schragl<br>Kontakt für diese Sicherungsanwendung: <a href="mailto:bic4711@gmail.com">bic4711@gmail.com</a></p>
+<footer>Stand: 6. November 2026.</footer>
+</main>
+</html>
